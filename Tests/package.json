@@ -1,0 +1,19 @@
+{
+  "name": "tests",
+  "version": "1.0.0",
+  "description": "Load/Stress Tests and their Results  ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "artillery": "artillery run %npm_config_testInput% -o %npm_config_testOutput%",
+    "report": "artillery report %npm_config_testOutput%"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "artillery": "^1.7.8"
+  },
+  "dependencies": {
+    "typescript": "^4.4.2"
+  }
+}

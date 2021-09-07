@@ -1,0 +1,14 @@
+config:
+  plugins:
+  target: "http://localhost:3000"
+  phases:
+    - duration: 60
+      arrivalRate: 1
+      name: Pipe Clean
+
+scenarios:
+  - name: "All recipes"
+    flow:
+      - get:
+          url: "/recipes"
+      - think: 2
