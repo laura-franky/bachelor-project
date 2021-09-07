@@ -1,6 +1,5 @@
 export const recipes = [
   {
-    id: 1,
     name: "Blaubeer Muffins",
     zutaten: [
       {
@@ -22,7 +21,6 @@ export const recipes = [
     ],
   },
   {
-    id: 2,
     name: "Schoko Muffins",
     zutaten: [
       {
@@ -44,7 +42,6 @@ export const recipes = [
     ],
   },
   {
-    id: 3,
     name: "Nougat Muffins",
     zutaten: [
       {
