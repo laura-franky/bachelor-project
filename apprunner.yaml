@@ -3,7 +3,6 @@ runtime: nodejs
 build:
   commands:
     build:
-      - cd ./Project
       - npm install
 run:
   command: npm start
