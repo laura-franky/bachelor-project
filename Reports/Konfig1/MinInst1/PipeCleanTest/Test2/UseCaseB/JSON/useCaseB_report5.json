@@ -1,0 +1,793 @@
+{
+  "aggregate": {
+    "timestamp": "2021-09-14T10:14:16.341Z",
+    "scenariosCreated": 120,
+    "scenariosCompleted": 120,
+    "requestsCompleted": 240,
+    "latency": {
+      "min": 96,
+      "max": 317,
+      "median": 104,
+      "p95": 112.5,
+      "p99": 148.7
+    },
+    "rps": {
+      "count": 240,
+      "mean": 1.95
+    },
+    "scenarioDuration": {
+      "min": 3513.8,
+      "max": 3758.3,
+      "median": 3551.4,
+      "p95": 3604.9,
+      "p99": 3666.7
+    },
+    "scenarioCounts": {
+      "Choose one recipe": 120
+    },
+    "errors": {},
+    "codes": {
+      "200": 240
+    },
+    "matches": 0,
+    "customStats": {},
+    "counters": {},
+    "scenariosAvoided": 0,
+    "phases": [
+      {
+        "duration": 120,
+        "arrivalRate": 1,
+        "name": "Pipe Clean"
+      }
+    ]
+  },
+  "intermediate": [
+    {
+      "timestamp": "2021-09-14T10:12:22.269Z",
+      "scenariosCreated": 9,
+      "scenariosCompleted": 6,
+      "requestsCompleted": 16,
+      "latency": {
+        "min": 99,
+        "max": 155,
+        "median": 105,
+        "p95": 152.9,
+        "p99": 155
+      },
+      "rps": {
+        "count": 16,
+        "mean": 1.78
+      },
+      "scenarioDuration": {
+        "min": 3530.4,
+        "max": 3627.5,
+        "median": 3582.9,
+        "p95": 3627.5,
+        "p99": 3627.5
+      },
+      "scenarioCounts": {
+        "Choose one recipe": 9
+      },
+      "errors": {},
+      "codes": {
+        "200": 16
+      },
+      "matches": 0,
+      "latencies": [
+        108000000,
+        104000000,
+        155000000,
+        148000000,
+        105000000,
+        105000000,
+        104000000,
+        106000000,
+        101000000,
+        104000000,
+        107000000,
+        105000000,
+        104000000,
+        99000000,
+        99000000,
+        107000000
+      ],
+      "customStats": {},
+      "counters": {},
+      "concurrency": 3,
+      "pendingRequests": 0,
+      "scenariosAvoided": 0
+    },
+    {
+      "timestamp": "2021-09-14T10:12:32.267Z",
+      "scenariosCreated": 10,
+      "scenariosCompleted": 10,
+      "requestsCompleted": 20,
+      "latency": {
+        "min": 102,
+        "max": 122,
+        "median": 106,
+        "p95": 118,
+        "p99": 122
+      },
+      "rps": {
+        "count": 20,
+        "mean": 2
+      },
+      "scenarioDuration": {
+        "min": 3536.2,
+        "max": 3571.7,
+        "median": 3552.3,
+        "p95": 3571.7,
+        "p99": 3571.7
+      },
+      "scenarioCounts": {
+        "Choose one recipe": 10
+      },
+      "errors": {},
+      "codes": {
+        "200": 20
+      },
+      "matches": 0,
+      "latencies": [
+        103000000,
+        108000000,
+        107000000,
+        102000000,
+        107000000,
+        106000000,
+        104000000,
+        103000000,
+        109000000,
+        114000000,
+        104000000,
+        110000000,
+        105000000,
+        106000000,
+        112000000,
+        122000000,
+        105000000,
+        102000000,
+        105000000,
+        106000000
+      ],
+      "customStats": {},
+      "counters": {},
+      "concurrency": 3,
+      "pendingRequests": 0,
+      "scenariosAvoided": 0
+    },
+    {
+      "timestamp": "2021-09-14T10:12:42.267Z",
+      "scenariosCreated": 10,
+      "scenariosCompleted": 10,
+      "requestsCompleted": 20,
+      "latency": {
+        "min": 98,
+        "max": 108,
+        "median": 103,
+        "p95": 107.5,
+        "p99": 108
+      },
+      "rps": {
+        "count": 20,
+        "mean": 2
+      },
+      "scenarioDuration": {
+        "min": 3519.2,
+        "max": 3567.5,
+        "median": 3541.7,
+        "p95": 3567.5,
+        "p99": 3567.5
+      },
+      "scenarioCounts": {
+        "Choose one recipe": 10
+      },
+      "errors": {},
+      "codes": {
+        "200": 20
+      },
+      "matches": 0,
+      "latencies": [
+        99000000,
+        103000000,
+        100000000,
+        106000000,
+        106000000,
+        98000000,
+        104000000,
+        102000000,
+        107000000,
+        103000000,
+        99000000,
+        103000000,
+        102000000,
+        107000000,
+        106000000,
+        99000000,
+        98000000,
+        104000000,
+        107000000,
+        108000000
+      ],
+      "customStats": {},
+      "counters": {},
+      "concurrency": 3,
+      "pendingRequests": 0,
+      "scenariosAvoided": 0
+    },
+    {
+      "timestamp": "2021-09-14T10:12:52.275Z",
+      "scenariosCreated": 10,
+      "scenariosCompleted": 10,
+      "requestsCompleted": 20,
+      "latency": {
+        "min": 98,
+        "max": 111,
+        "median": 104.5,
+        "p95": 110,
+        "p99": 111
+      },
+      "rps": {
+        "count": 20,
+        "mean": 2
+      },
+      "scenarioDuration": {
+        "min": 3525.4,
+        "max": 3606.9,
+        "median": 3553,
+        "p95": 3606.9,
+        "p99": 3606.9
+      },
+      "scenarioCounts": {
+        "Choose one recipe": 10
+      },
+      "errors": {},
+      "codes": {
+        "200": 20
+      },
+      "matches": 0,
+      "latencies": [
+        104000000,
+        98000000,
+        103000000,
+        111000000,
+        109000000,
+        107000000,
+        108000000,
+        104000000,
+        100000000,
+        106000000,
+        107000000,
+        104000000,
+        99000000,
+        105000000,
+        106000000,
+        108000000,
+        104000000,
+        101000000,
+        100000000,
+        108000000
+      ],
+      "customStats": {},
+      "counters": {},
+      "concurrency": 3,
+      "pendingRequests": 0,
+      "scenariosAvoided": 0
+    },
+    {
+      "timestamp": "2021-09-14T10:13:02.267Z",
+      "scenariosCreated": 10,
+      "scenariosCompleted": 10,
+      "requestsCompleted": 20,
+      "latency": {
+        "min": 100,
+        "max": 146,
+        "median": 105,
+        "p95": 143,
+        "p99": 146
+      },
+      "rps": {
+        "count": 20,
+        "mean": 2
+      },
+      "scenarioDuration": {
+        "min": 3540.6,
+        "max": 3617.5,
+        "median": 3561.6,
+        "p95": 3617.5,
+        "p99": 3617.5
+      },
+      "scenarioCounts": {
+        "Choose one recipe": 10
+      },
+      "errors": {},
+      "codes": {
+        "200": 20
+      },
+      "matches": 0,
+      "latencies": [
+        103000000,
+        109000000,
+        140000000,
+        112000000,
+        113000000,
+        104000000,
+        146000000,
+        125000000,
+        103000000,
+        105000000,
+        100000000,
+        107000000,
+        104000000,
+        103000000,
+        120000000,
+        103000000,
+        105000000,
+        105000000,
+        103000000,
+        109000000
+      ],
+      "customStats": {},
+      "counters": {},
+      "concurrency": 3,
+      "pendingRequests": 0,
+      "scenariosAvoided": 0
+    },
+    {
+      "timestamp": "2021-09-14T10:13:12.266Z",
+      "scenariosCreated": 10,
+      "scenariosCompleted": 10,
+      "requestsCompleted": 20,
+      "latency": {
+        "min": 96,
+        "max": 110,
+        "median": 105,
+        "p95": 109,
+        "p99": 110
+      },
+      "rps": {
+        "count": 20,
+        "mean": 2
+      },
+      "scenarioDuration": {
+        "min": 3539.5,
+        "max": 3581.6,
+        "median": 3554.2,
+        "p95": 3581.6,
+        "p99": 3581.6
+      },
+      "scenarioCounts": {
+        "Choose one recipe": 10
+      },
+      "errors": {},
+      "codes": {
+        "200": 20
+      },
+      "matches": 0,
+      "latencies": [
+        103000000,
+        106000000,
+        107000000,
+        106000000,
+        101000000,
+        104000000,
+        104000000,
+        108000000,
+        108000000,
+        96000000,
+        103000000,
+        105000000,
+        102000000,
+        105000000,
+        110000000,
+        102000000,
+        108000000,
+        102000000,
+        105000000,
+        105000000
+      ],
+      "customStats": {},
+      "counters": {},
+      "concurrency": 3,
+      "pendingRequests": 0,
+      "scenariosAvoided": 0
+    },
+    {
+      "timestamp": "2021-09-14T10:13:22.265Z",
+      "scenariosCreated": 10,
+      "scenariosCompleted": 10,
+      "requestsCompleted": 20,
+      "latency": {
+        "min": 99,
+        "max": 317,
+        "median": 104,
+        "p95": 215.5,
+        "p99": 317
+      },
+      "rps": {
+        "count": 20,
+        "mean": 2
+      },
+      "scenarioDuration": {
+        "min": 3513.8,
+        "max": 3570.7,
+        "median": 3557.9,
+        "p95": 3570.7,
+        "p99": 3570.7
+      },
+      "scenarioCounts": {
+        "Choose one recipe": 10
+      },
+      "errors": {},
+      "codes": {
+        "200": 20
+      },
+      "matches": 0,
+      "latencies": [
+        106000000,
+        108000000,
+        100000000,
+        102000000,
+        103000000,
+        109000000,
+        102000000,
+        99000000,
+        107000000,
+        102000000,
+        104000000,
+        102000000,
+        109000000,
+        114000000,
+        103000000,
+        104000000,
+        103000000,
+        106000000,
+        105000000,
+        317000000
+      ],
+      "customStats": {},
+      "counters": {},
+      "concurrency": 3,
+      "pendingRequests": 0,
+      "scenariosAvoided": 0
+    },
+    {
+      "timestamp": "2021-09-14T10:13:32.274Z",
+      "scenariosCreated": 10,
+      "scenariosCompleted": 10,
+      "requestsCompleted": 20,
+      "latency": {
+        "min": 101,
+        "max": 108,
+        "median": 103,
+        "p95": 108,
+        "p99": 108
+      },
+      "rps": {
+        "count": 20,
+        "mean": 2
+      },
+      "scenarioDuration": {
+        "min": 3526.6,
+        "max": 3758.3,
+        "median": 3550.2,
+        "p95": 3758.3,
+        "p99": 3758.3
+      },
+      "scenarioCounts": {
+        "Choose one recipe": 10
+      },
+      "errors": {},
+      "codes": {
+        "200": 20
+      },
+      "matches": 0,
+      "latencies": [
+        106000000,
+        103000000,
+        108000000,
+        101000000,
+        108000000,
+        106000000,
+        101000000,
+        107000000,
+        102000000,
+        107000000,
+        103000000,
+        101000000,
+        106000000,
+        101000000,
+        103000000,
+        103000000,
+        103000000,
+        102000000,
+        103000000,
+        103000000
+      ],
+      "customStats": {},
+      "counters": {},
+      "concurrency": 3,
+      "pendingRequests": 0,
+      "scenariosAvoided": 0
+    },
+    {
+      "timestamp": "2021-09-14T10:13:42.266Z",
+      "scenariosCreated": 10,
+      "scenariosCompleted": 10,
+      "requestsCompleted": 20,
+      "latency": {
+        "min": 98,
+        "max": 108,
+        "median": 103.5,
+        "p95": 108,
+        "p99": 108
+      },
+      "rps": {
+        "count": 20,
+        "mean": 2
+      },
+      "scenarioDuration": {
+        "min": 3523.3,
+        "max": 3571.7,
+        "median": 3543.8,
+        "p95": 3571.7,
+        "p99": 3571.7
+      },
+      "scenarioCounts": {
+        "Choose one recipe": 10
+      },
+      "errors": {},
+      "codes": {
+        "200": 20
+      },
+      "matches": 0,
+      "latencies": [
+        104000000,
+        104000000,
+        103000000,
+        102000000,
+        105000000,
+        104000000,
+        98000000,
+        100000000,
+        108000000,
+        104000000,
+        99000000,
+        99000000,
+        103000000,
+        106000000,
+        107000000,
+        102000000,
+        105000000,
+        103000000,
+        102000000,
+        108000000
+      ],
+      "customStats": {},
+      "counters": {},
+      "concurrency": 3,
+      "pendingRequests": 0,
+      "scenariosAvoided": 0
+    },
+    {
+      "timestamp": "2021-09-14T10:13:52.265Z",
+      "scenariosCreated": 10,
+      "scenariosCompleted": 10,
+      "requestsCompleted": 20,
+      "latency": {
+        "min": 96,
+        "max": 109,
+        "median": 102.5,
+        "p95": 108.5,
+        "p99": 109
+      },
+      "rps": {
+        "count": 20,
+        "mean": 2
+      },
+      "scenarioDuration": {
+        "min": 3518.6,
+        "max": 3579.3,
+        "median": 3540.2,
+        "p95": 3579.3,
+        "p99": 3579.3
+      },
+      "scenarioCounts": {
+        "Choose one recipe": 10
+      },
+      "errors": {},
+      "codes": {
+        "200": 20
+      },
+      "matches": 0,
+      "latencies": [
+        101000000,
+        102000000,
+        108000000,
+        102000000,
+        106000000,
+        99000000,
+        99000000,
+        103000000,
+        108000000,
+        107000000,
+        108000000,
+        96000000,
+        100000000,
+        106000000,
+        103000000,
+        102000000,
+        109000000,
+        100000000,
+        100000000,
+        106000000
+      ],
+      "customStats": {},
+      "counters": {},
+      "concurrency": 3,
+      "pendingRequests": 0,
+      "scenariosAvoided": 0
+    },
+    {
+      "timestamp": "2021-09-14T10:14:02.269Z",
+      "scenariosCreated": 10,
+      "scenariosCompleted": 10,
+      "requestsCompleted": 20,
+      "latency": {
+        "min": 100,
+        "max": 108,
+        "median": 104.5,
+        "p95": 108,
+        "p99": 108
+      },
+      "rps": {
+        "count": 20,
+        "mean": 2
+      },
+      "scenarioDuration": {
+        "min": 3527.6,
+        "max": 3579.8,
+        "median": 3551.3,
+        "p95": 3579.8,
+        "p99": 3579.8
+      },
+      "scenarioCounts": {
+        "Choose one recipe": 10
+      },
+      "errors": {},
+      "codes": {
+        "200": 20
+      },
+      "matches": 0,
+      "latencies": [
+        108000000,
+        107000000,
+        104000000,
+        103000000,
+        108000000,
+        108000000,
+        100000000,
+        107000000,
+        108000000,
+        103000000,
+        104000000,
+        104000000,
+        100000000,
+        107000000,
+        107000000,
+        103000000,
+        105000000,
+        102000000,
+        104000000,
+        107000000
+      ],
+      "customStats": {},
+      "counters": {},
+      "concurrency": 3,
+      "pendingRequests": 0,
+      "scenariosAvoided": 0
+    },
+    {
+      "timestamp": "2021-09-14T10:14:12.265Z",
+      "scenariosCreated": 10,
+      "scenariosCompleted": 10,
+      "requestsCompleted": 20,
+      "latency": {
+        "min": 98,
+        "max": 108,
+        "median": 104,
+        "p95": 107.5,
+        "p99": 108
+      },
+      "rps": {
+        "count": 20,
+        "mean": 2
+      },
+      "scenarioDuration": {
+        "min": 3521.3,
+        "max": 3573.4,
+        "median": 3539.6,
+        "p95": 3573.4,
+        "p99": 3573.4
+      },
+      "scenarioCounts": {
+        "Choose one recipe": 10
+      },
+      "errors": {},
+      "codes": {
+        "200": 20
+      },
+      "matches": 0,
+      "latencies": [
+        102000000,
+        104000000,
+        105000000,
+        105000000,
+        107000000,
+        104000000,
+        102000000,
+        105000000,
+        101000000,
+        107000000,
+        107000000,
+        100000000,
+        104000000,
+        98000000,
+        101000000,
+        108000000,
+        105000000,
+        102000000,
+        107000000,
+        99000000
+      ],
+      "customStats": {},
+      "counters": {},
+      "concurrency": 3,
+      "pendingRequests": 0,
+      "scenariosAvoided": 0
+    },
+    {
+      "timestamp": "2021-09-14T10:14:16.327Z",
+      "scenariosCreated": 1,
+      "scenariosCompleted": 4,
+      "requestsCompleted": 4,
+      "latency": {
+        "min": 102,
+        "max": 136,
+        "median": 103,
+        "p95": 136,
+        "p99": 136
+      },
+      "rps": {
+        "count": 4,
+        "mean": 0.99
+      },
+      "scenarioDuration": {
+        "min": 3530.8,
+        "max": 3603,
+        "median": 3538.8,
+        "p95": 3603,
+        "p99": 3603
+      },
+      "scenarioCounts": {
+        "Choose one recipe": 1
+      },
+      "errors": {},
+      "codes": {
+        "200": 4
+      },
+      "matches": 0,
+      "latencies": [
+        102000000,
+        104000000,
+        102000000,
+        136000000
+      ],
+      "customStats": {},
+      "counters": {},
+      "concurrency": 0,
+      "pendingRequests": 0,
+      "scenariosAvoided": 0
+    }
+  ]
+}
