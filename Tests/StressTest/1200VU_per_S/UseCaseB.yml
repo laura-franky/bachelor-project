@@ -7,18 +7,14 @@ config:
       name: Warm up
     - duration: 120
       arrivalRate: 5
-      rampTo: 50
+      rampTo: 100
       name: 1. Ramp Up
-    - duration: 120
+    - duration: 240
       arrivalRate: 50
-      rampTo: 200
+      rampTo: 400
       name: 2. Ramp Up
     - duration: 240
       arrivalRate: 200
-      rampTo: 600
-      name: 3. Ramp Up
-    - duration: 240
-      arrivalRate: 600
       rampTo: 1200
       name: 3. Ramp Up
 
