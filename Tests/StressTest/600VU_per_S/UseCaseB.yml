@@ -2,18 +2,18 @@ config:
   plugins:
   target: "https://kwqnze338k.us-east-1.awsapprunner.com"
   phases:
-   - duration: 60
+    - duration: 60
       arrivalRate: 5
       name: Warm up
-   - duration: 120
+    - duration: 120
       arrivalRate: 5
       rampTo: 50
       name: 1. Ramp Up
-   - duration: 240
+    - duration: 240
       arrivalRate: 50
       rampTo: 200
       name: 2. Ramp Up
-   - duration: 240
+    - duration: 240
       arrivalRate: 200
       rampTo: 600
       name: 3. Ramp Up
