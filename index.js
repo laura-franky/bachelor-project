@@ -1,6 +1,6 @@
 import express, { Router } from "express";
 import recipes from "./recipes.js";
-var bodyParser = require("body-parser");
+import bodyParser from "body-parser";
 
 const port = 3000;
 export const recipeRouter = Router({ mergeParams: true });
