@@ -52,6 +52,7 @@ recipeRouter.patch("/recipes/:id", async (req, res) => {
   }
 });
 
+// Create a recipe
 recipeRouter.post("/recipes/", async (req, res) => {
   const recipeInfo = req.body;
   const newID = recipes.length + 1;
