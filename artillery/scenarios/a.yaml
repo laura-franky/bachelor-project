@@ -1,0 +1,6 @@
+scenarios:
+  - name: "Get all recipes"
+    flow:
+      - get:
+          url: "/recipes"
+      - think: 2

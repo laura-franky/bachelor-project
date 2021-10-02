@@ -1,0 +1,59 @@
+# Stress Test
+# multiple enviroments for testing different concurrent user values
+
+config:
+  target: "https://kwqnze338k.us-east-1.awsapprunner.com"
+  enviroments:
+    600-concurrent-user-stress-test:
+      phases:
+        - duration: 30
+          arrivalRate: 1
+          maxVusers: 5
+          name: Warm up
+
+        - duration: 60
+          arrivalRate: 5
+          maxVusers: 50
+          name: 1. Ramp Up
+
+        - duration: 60
+          arrivalRate: 50
+          maxVusers: 200
+          name: 2. Ramp Up
+
+        - duration: 60
+          arrivalRate: 200
+          maxVusers: 600
+          name: 3. Ramp Up
+
+        - duration: 240
+          arrivalRate: 600
+          maxVusers: 600
+          name: Hold Load
+
+    1200-concurrent-user-stress-test:
+      phases:
+        - duration: 30
+          arrivalRate: 1
+          maxVusers: 5
+          name: Warm up
+
+        - duration: 60
+          arrivalRate: 10
+          maxVusers: 100
+          name: 1. Ramp Up
+
+        - duration: 60
+          arrivalRate: 100
+          maxVusers: 400
+          name: 2. Ramp Up
+
+        - duration: 60
+          arrivalRate: 400
+          maxVusers: 1200
+          name: 3. Ramp Up
+
+        - duration: 240
+          arrivalRate: 1200
+          maxVusers: 1200
+          name: Hold Load

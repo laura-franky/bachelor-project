@@ -1,0 +1,19 @@
+scenarios:
+  - name: "Edit a recipe"
+    flow:
+      - get:
+          url: "/recipes"
+      - think: 2
+      - get:
+          url: "/recipes/2"
+      - think: 1
+      - patch:
+          url: "/recipes/2"
+          json:
+            name: "Nuss Muffin"
+            zutaten:
+              [
+                { name: "Mehl", menge: "500 gramm" },
+                { name: "Nüsse", menge: "500 gramm" },
+              ]
+            schritte: [{ name: "Alles mischen und backen" }]

@@ -1,0 +1,16 @@
+scenarios:
+  - name: "Create a recipe"
+    flow:
+      - get:
+          url: "/recipes"
+      - think: 2
+      - post:
+          url: "/recipes/"
+          json:
+            name: "Nuss Muffin"
+            zutaten:
+              [
+                { name: "Mehl", menge: "500 gramm" },
+                { name: "Nüsse", menge: "500 gramm" },
+              ]
+            schritte: [{ name: "Alles mischen und backen" }]

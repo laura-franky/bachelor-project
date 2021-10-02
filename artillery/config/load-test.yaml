@@ -12,10 +12,3 @@ config:
     - duration: 100
       arrivalRate: 50
       name: Sustained load
-
-scenarios:
-  - name: "All recipes"
-    flow:
-      - get:
-          url: "/recipes"
-      - think: 2

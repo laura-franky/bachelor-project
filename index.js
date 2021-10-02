@@ -1,106 +1,69 @@
 import express, { Router } from "express";
-
-// example data
-export const recipes = [
-  {
-    name: "Blaubeer Muffins",
-    zutaten: [
-      {
-        name: "Mehl",
-        menge: "500 gramm",
-      },
-      {
-        name: "Zucker",
-        menge: "500 gramm",
-      },
-    ],
-    schritte: [
-      {
-        name: "Zutaten mischen",
-      },
-      {
-        name: "20 Minuten bei 180 Grad im Ofen backen",
-      },
-    ],
-  },
-  {
-    name: "Schoko Muffins",
-    zutaten: [
-      {
-        name: "Mehl",
-        menge: "500 gramm",
-      },
-      {
-        name: "Zucker",
-        menge: "500 gramm",
-      },
-    ],
-    schritte: [
-      {
-        name: "Zutaten mischen",
-      },
-      {
-        name: "20 Minuten bei 180 Grad im Ofen backen",
-      },
-    ],
-  },
-  {
-    name: "Nougat Muffins",
-    zutaten: [
-      {
-        name: "Mehl",
-        menge: "500 gramm",
-      },
-      {
-        name: "Zucker",
-        menge: "500 gramm",
-      },
-    ],
-    schritte: [
-      {
-        name: "Zutaten mischen",
-      },
-      {
-        name: "20 Minuten bei 180 Grad im Ofen backen",
-      },
-    ],
-  },
-];
+import recipes from "./recipes.js";
+var bodyParser = require("body-parser");
 
 const port = 3000;
-export const globalRouter = Router({ mergeParams: true });
+export const recipeRouter = Router({ mergeParams: true });
 
 // Basic get
-globalRouter.get("/", async (_, res) => {
+recipeRouter.get("/", async (_, res) => {
   res.send({
     message: "Willkommen",
   });
 });
 
-// Basic get
-globalRouter.get("/recipes", async (_, res) => {
+// Get all recipes
+recipeRouter.get("/recipes", async (_, res) => {
   res.send({
-    message: recipes,
+    data: recipes,
   });
 });
 
-globalRouter.get("/recipes/:id", async (req, res) => {
-  const id = Number(req.params.id) - 1;
-  if (typeof recipes[id] === "undefined") {
+// Get one recipe by ID
+recipeRouter.get("/recipes/:id", async (req, res) => {
+  const id = Number(req.params.id);
+  const recipe = recipes.find((recipe) => recipe.id == id);
+
+  if (typeof recipe === "undefined") {
     res.status(404).send({
       message: "recipe not found",
     });
   } else {
     res.send({
-      message: recipes[id],
+      data: recipe,
     });
   }
+});
+
+// Update one recipe by ID
+recipeRouter.patch("/recipes/:id", async (req, res) => {
+  const id = Number(req.params.id);
+  recipeUpdate = req.body;
+
+  const recipe = recipes.find((recipe) => recipe.id == id);
+
+  if (typeof recipe === "undefined") {
+    res.status(404).send({
+      message: "recipe not found",
+    });
+  } else {
+    const updatedRecipe = { id, ...recipeUpdate };
+    res.send(updatedRecipe);
+  }
+});
+
+recipeRouter.post("/recipes/", async (req, res) => {
+  const recipeInfo = req.body;
+  const createdRecipe = { ...recipeInfo, id: recipes.length() };
+
+  res.send(createdRecipe);
 });
 
 export const startServer = () => {
   const app = express();
 
-  app.use("/", globalRouter);
+  app.use(bodyParser.json());
+  app.use("/", recipeRouter);
 
   const server = app.listen(port, () =>
     console.log("Server is running on port", port)
