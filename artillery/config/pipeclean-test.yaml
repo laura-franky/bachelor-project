@@ -2,11 +2,9 @@
 # A maximum of one concurrent user at a time for 10 minutes (600 seconds)
 
 config:
-  target: "https://kwqnze338k.us-east-1.awsapprunner.com"
-  enviroments:
-    pipeclean-test:
-      phases:
-        - duration: 600
-          arrivalRate: 1
-          maxVusers: 1
-          name: Pipe Clean
+  target: "http://localhost:3000"
+  phases:
+    - duration: 600
+      arrivalRate: 1
+      maxVusers: 1
+      name: Pipe Clean
