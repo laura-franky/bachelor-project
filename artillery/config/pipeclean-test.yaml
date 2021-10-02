@@ -2,7 +2,7 @@
 # A maximum of one concurrent user at a time for 10 minutes (600 seconds)
 
 config:
-  target: "http://localhost:3000"
+  target: "https://kwqnze338k.us-east-1.awsapprunner.com"
   phases:
     - duration: 600
       arrivalRate: 1
