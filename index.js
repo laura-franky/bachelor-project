@@ -38,7 +38,7 @@ recipeRouter.get("/recipes/:id", async (req, res) => {
 // Update one recipe by ID
 recipeRouter.patch("/recipes/:id", async (req, res) => {
   const id = Number(req.params.id);
-  recipeUpdate = req.body;
+  const recipeUpdate = req.body;
 
   const recipe = recipes.find((recipe) => recipe.id == id);
 
@@ -54,7 +54,8 @@ recipeRouter.patch("/recipes/:id", async (req, res) => {
 
 recipeRouter.post("/recipes/", async (req, res) => {
   const recipeInfo = req.body;
-  const createdRecipe = { ...recipeInfo, id: recipes.length() };
+  const newID = recipes.length + 1;
+  const createdRecipe = { id: newID, ...recipeInfo };
 
   res.send(createdRecipe);
 });
