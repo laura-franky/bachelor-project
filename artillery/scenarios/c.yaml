@@ -15,3 +15,6 @@ scenarios:
               ]
             schritte: [{ name: "Alles mischen und backen" }]
       - think: 2
+      - get:
+          url: "/recipes"
+      - think: 2
