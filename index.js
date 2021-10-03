@@ -48,7 +48,9 @@ recipeRouter.patch("/recipes/:id", async (req, res) => {
     });
   } else {
     const updatedRecipe = { id, ...recipeUpdate };
-    res.send(updatedRecipe);
+    res.send({
+      data: updatedRecipe,
+    });
   }
 });
 
@@ -58,7 +60,9 @@ recipeRouter.post("/recipes/", async (req, res) => {
   const newID = recipes.length + 1;
   const createdRecipe = { id: newID, ...recipeInfo };
 
-  res.send(createdRecipe);
+  res.send({
+    data: createdRecipe,
+  });
 });
 
 export const startServer = () => {
