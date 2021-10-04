@@ -3,8 +3,8 @@
 
 config:
   target: "https://kwqnze338k.us-east-1.awsapprunner.com"
-  enviroments:
-    600-concurrent-user-stress-test:
+  environments:
+    625-concurrent-user-stress-test:
       phases:
         - duration: 30
           arrivalRate: 1
@@ -17,21 +17,26 @@ config:
           name: 1. Ramp Up
 
         - duration: 60
-          arrivalRate: 50
-          maxVusers: 200
+          arrivalRate: 25
+          maxVusers: 250
           name: 2. Ramp Up
 
         - duration: 60
-          arrivalRate: 200
-          maxVusers: 600
+          arrivalRate: 125
+          maxVusers: 450
           name: 3. Ramp Up
 
-        - duration: 240
-          arrivalRate: 600
+        - duration: 60
+          arrivalRate: 375
           maxVusers: 600
+          name: 4. Ramp Up
+
+        - duration: 240
+          arrivalRate: 625
+          maxVusers: 625
           name: Hold Load
 
-    1200-concurrent-user-stress-test:
+    1250-concurrent-user-stress-test:
       phases:
         - duration: 30
           arrivalRate: 1

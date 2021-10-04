@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "artillery": "artillery run -c ${npm_config_testConfig} -o ${npm_config_testOutput} ${npm_config_testInput} ",
+    "artillery": "artillery run -c ${npm_config_testConfig} -e ${npm_config_testEnv} -o ${npm_config_testOutput} ${npm_config_testInput} ",
     "report": "artillery report ${npm_config_testOutput}"
   },
   "author": "",
