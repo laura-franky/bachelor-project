@@ -44,21 +44,31 @@ config:
           name: Warm up
 
         - duration: 60
-          arrivalRate: 10
+          arrivalRate: 50
           maxVusers: 100
           name: 1. Ramp Up
 
         - duration: 60
           arrivalRate: 100
-          maxVusers: 400
+          maxVusers: 250
           name: 2. Ramp Up
 
         - duration: 60
-          arrivalRate: 400
-          maxVusers: 1200
+          arrivalRate: 200
+          maxVusers: 500
           name: 3. Ramp Up
 
+        - duration: 60
+          arrivalRate: 400
+          maxVusers: 750
+          name: 4. Ramp Up
+
+        - duration: 60
+          arrivalRate: 800
+          maxVusers: 1000
+          name: 5. Ramp Up
+
         - duration: 240
-          arrivalRate: 1200
-          maxVusers: 1200
+          arrivalRate: 1250
+          maxVusers: 1250
           name: Hold Load
