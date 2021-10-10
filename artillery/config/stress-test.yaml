@@ -1,10 +1,14 @@
 # Stress Test
 # multiple enviroments for testing different concurrent user values
+# 10 Workers in each environment
+
+# 9000 concurrent user
+# 12000 concurrent user
 
 config:
   target: "https://kwqnze338k.us-east-1.awsapprunner.com"
   environments:
-    625-concurrent-user-stress-test:
+    300-concurrent-user-stress-test:
       phases:
         - duration: 30
           arrivalRate: 1
@@ -12,31 +16,31 @@ config:
           name: Warm up
 
         - duration: 60
-          arrivalRate: 5
-          maxVusers: 50
+          arrivalRate: 60
+          maxVusers: 60
           name: 1. Ramp Up
 
         - duration: 60
-          arrivalRate: 25
-          maxVusers: 250
+          arrivalRate: 120
+          maxVusers: 120
           name: 2. Ramp Up
 
         - duration: 60
-          arrivalRate: 125
-          maxVusers: 450
+          arrivalRate: 180
+          maxVusers: 180
           name: 3. Ramp Up
 
         - duration: 60
-          arrivalRate: 375
-          maxVusers: 600
+          arrivalRate: 240
+          maxVusers: 240
           name: 4. Ramp Up
 
         - duration: 240
-          arrivalRate: 625
-          maxVusers: 625
+          arrivalRate: 300
+          maxVusers: 300
           name: Hold Load
 
-    1250-concurrent-user-stress-test:
+    600-concurrent-user-stress-test:
       phases:
         - duration: 30
           arrivalRate: 1
@@ -44,31 +48,51 @@ config:
           name: Warm up
 
         - duration: 60
-          arrivalRate: 50
-          maxVusers: 100
+          arrivalRate: 60
+          maxVusers: 60
           name: 1. Ramp Up
 
         - duration: 60
-          arrivalRate: 100
-          maxVusers: 250
+          arrivalRate: 120
+          maxVusers: 120
           name: 2. Ramp Up
 
         - duration: 60
-          arrivalRate: 200
-          maxVusers: 500
+          arrivalRate: 180
+          maxVusers: 180
           name: 3. Ramp Up
 
         - duration: 60
-          arrivalRate: 400
-          maxVusers: 750
+          arrivalRate: 240
+          maxVusers: 240
           name: 4. Ramp Up
 
         - duration: 60
-          arrivalRate: 800
-          maxVusers: 1000
+          arrivalRate: 300
+          maxVusers: 300
           name: 5. Ramp Up
 
+        - duration: 60
+          arrivalRate: 360
+          maxVusers: 360
+          name: 6. Ramp Up
+
+        - duration: 60
+          arrivalRate: 420
+          maxVusers: 420
+          name: 7. Ramp Up
+
+        - duration: 60
+          arrivalRate: 480
+          maxVusers: 480
+          name: 8. Ramp Up
+
+        - duration: 60
+          arrivalRate: 540
+          maxVusers: 540
+          name: 9. Ramp Up
+
         - duration: 240
-          arrivalRate: 1250
-          maxVusers: 1250
+          arrivalRate: 600
+          maxVusers: 600
           name: Hold Load
