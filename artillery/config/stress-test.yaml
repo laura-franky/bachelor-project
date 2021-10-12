@@ -3,13 +3,45 @@
 # 10 Workers in each environment
 
 # Step rate => 20
+# 100 VU => 1000 concurrent user
 # 200 VU => 2000 concurrent user
 # 400 VU => 4000 concurrent user
-# 600 VU => 6000 concurrent user
 
 config:
   target: "https://kwqnze338k.us-east-1.awsapprunner.com"
   environments:
+    100-concurrent-user-stress-test:
+      phases:
+        - duration: 30
+          arrivalRate: 1
+          maxVusers: 5
+          name: Warm up
+
+        - duration: 60
+          arrivalRate: 20
+          maxVusers: 20
+          name: 1. Ramp Up
+
+        - duration: 60
+          arrivalRate: 40
+          maxVusers: 40
+          name: 2. Ramp Up
+
+        - duration: 60
+          arrivalRate: 60
+          maxVusers: 60
+          name: 3. Ramp Up
+
+        - duration: 60
+          arrivalRate: 80
+          maxVusers: 80
+          name: 4. Ramp Up
+
+        - duration: 240
+          arrivalRate: 100
+          maxVusers: 100
+          name: Hold Load
+
     200-concurrent-user-stress-test:
       phases:
         - duration: 30
@@ -172,161 +204,4 @@ config:
         - duration: 240
           arrivalRate: 400
           maxVusers: 400
-          name: Hold Load
-
-    600-concurrent-user-stress-test:
-      phases:
-        - duration: 30
-          arrivalRate: 1
-          maxVusers: 5
-          name: Warm up
-
-        - duration: 60
-          arrivalRate: 20
-          maxVusers: 20
-          name: 1. Ramp Up
-
-        - duration: 60
-          arrivalRate: 40
-          maxVusers: 40
-          name: 2. Ramp Up
-
-        - duration: 60
-          arrivalRate: 60
-          maxVusers: 60
-          name: 3. Ramp Up
-
-        - duration: 60
-          arrivalRate: 80
-          maxVusers: 80
-          name: 4. Ramp Up
-
-        - duration: 60
-          arrivalRate: 100
-          maxVusers: 100
-          name: 5. Ramp Up
-
-        - duration: 60
-          arrivalRate: 120
-          maxVusers: 120
-          name: 6. Ramp Up
-
-        - duration: 60
-          arrivalRate: 140
-          maxVusers: 140
-          name: 7. Ramp Up
-
-        - duration: 60
-          arrivalRate: 160
-          maxVusers: 160
-          name: 8. Ramp Up
-
-        - duration: 60
-          arrivalRate: 180
-          maxVusers: 180
-          name: 9. Ramp Up
-
-        - duration: 60
-          arrivalRate: 200
-          maxVusers: 200
-          name: 10. Ramp Up
-
-        - duration: 60
-          arrivalRate: 220
-          maxVusers: 220
-          name: 11. Ramp Up
-
-        - duration: 60
-          arrivalRate: 240
-          maxVusers: 240
-          name: 12. Ramp Up
-
-        - duration: 60
-          arrivalRate: 260
-          maxVusers: 260
-          name: 13. Ramp Up
-
-        - duration: 60
-          arrivalRate: 280
-          maxVusers: 280
-          name: 14. Ramp Up
-
-        - duration: 60
-          arrivalRate: 300
-          maxVusers: 300
-          name: 15. Ramp Up
-
-        - duration: 60
-          arrivalRate: 320
-          maxVusers: 320
-          name: 16. Ramp Up
-
-        - duration: 60
-          arrivalRate: 340
-          maxVusers: 340
-          name: 17. Ramp Up
-
-        - duration: 60
-          arrivalRate: 360
-          maxVusers: 360
-          name: 18. Ramp Up
-
-        - duration: 60
-          arrivalRate: 380
-          maxVusers: 380
-          name: 19. Ramp Up
-
-        - duration: 60
-          arrivalRate: 400
-          maxVusers: 400
-          name: 20. Ramp Up
-
-        - duration: 60
-          arrivalRate: 420
-          maxVusers: 420
-          name: 21. Ramp Up
-
-        - duration: 60
-          arrivalRate: 440
-          maxVusers: 440
-          name: 22. Ramp Up
-
-        - duration: 60
-          arrivalRate: 460
-          maxVusers: 460
-          name: 23. Ramp Up
-
-        - duration: 60
-          arrivalRate: 480
-          maxVusers: 480
-          name: 24. Ramp Up
-
-        - duration: 60
-          arrivalRate: 500
-          maxVusers: 500
-          name: 25. Ramp Up
-
-        - duration: 60
-          arrivalRate: 520
-          maxVusers: 520
-          name: 26. Ramp Up
-
-        - duration: 60
-          arrivalRate: 540
-          maxVusers: 540
-          name: 27. Ramp Up
-
-        - duration: 60
-          arrivalRate: 560
-          maxVusers: 560
-          name: 28. Ramp Up
-
-        - duration: 60
-          arrivalRate: 580
-          maxVusers: 580
-          name: 29. Ramp Up
-
-        - duration: 240
-          arrivalRate: 600
-          maxVusers: 600
           name: Hold Load
