@@ -42,6 +42,53 @@ config:
           maxVusers: 100
           name: Hold Load
 
+    150-concurrent-user-stress-test:
+      phases:
+        - duration: 30
+          arrivalRate: 1
+          maxVusers: 5
+          name: Warm up
+
+        - duration: 60
+          arrivalRate: 20
+          maxVusers: 20
+          name: 1. Ramp Up
+
+        - duration: 60
+          arrivalRate: 40
+          maxVusers: 40
+          name: 2. Ramp Up
+
+        - duration: 60
+          arrivalRate: 60
+          maxVusers: 60
+          name: 3. Ramp Up
+
+        - duration: 60
+          arrivalRate: 80
+          maxVusers: 80
+          name: 4. Ramp Up
+
+        - duration: 60
+          arrivalRate: 100
+          maxVusers: 100
+          name: 5. Ramp Up
+
+        - duration: 60
+          arrivalRate: 120
+          maxVusers: 120
+          name: 6. Ramp Up
+
+        - duration: 60
+          arrivalRate: 140
+          maxVusers: 140
+          name: 7. Ramp Up
+
+        - duration: 240
+          arrivalRate: 150
+          maxVusers: 150
+          name: Hold Load
+
     200-concurrent-user-stress-test:
       phases:
         - duration: 30
