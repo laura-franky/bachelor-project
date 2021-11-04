@@ -5,23 +5,29 @@ config:
       phases:
         - duration: 60
           arrivalRate: 5
+          maxVusers: 10
           name: Warm up
-        - duration: 60
+        - duration: 720
           arrivalRate: 5
-          rampTo: 50
-          name: Ramp up 1
-        - duration: 60
-          arrivalRate: 50
           rampTo: 100
-          name: Ramp up 2
-        - duration: 60
-          arrivalRate: 100
-          rampTo: 150
-          name: Ramp up 3
-        - duration: 60
-          arrivalRate: 150
-          rampTo: 200
-          name: Ramp up 4
-        - duration: 300
+          maxVusers: 200
+          name: Ramp up
+        - duration: 240
           arrivalRate: 200
+          maxVusers: 200
+          name: Sustained Load
+    400-VU-load-test:
+      phases:
+        - duration: 60
+          arrivalRate: 10
+          maxVusers: 10
+          name: Warm up
+        - duration: 720
+          arrivalRate: 10
+          rampTo: 200
+          maxVusers: 400
+          name: Ramp up
+        - duration: 240
+          arrivalRate: 400
+          maxVusers: 400
           name: Sustained Load
