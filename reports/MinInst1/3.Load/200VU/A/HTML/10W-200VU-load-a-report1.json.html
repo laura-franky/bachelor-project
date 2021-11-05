@@ -1,4 +1,53 @@
-{
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Artillery report</title>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.0/d3.min.js' charset='utf-8'></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/metrics-graphics/2.6.0/metricsgraphics.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/metrics-graphics/2.6.0/metricsgraphics.min.js"></script>
+
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+  <link href='https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/ace.js" charset="utf-8"></script>
+
+  <style>
+  body, p, li {
+    font-family: sans-serif;
+    font-size: 10pt;
+  }
+
+  h1 {
+    font-size: 18pt;
+    font-weight: bold;
+  }
+
+  #errorsContainer > p {
+    color: #009900;
+  }
+
+  #footer {
+    padding: 1em;
+    font-size: 0.8em;
+    color: #999;
+    text-align: center;
+    margin-top: 1em;
+    background-color: #eee;
+  }
+  #editor {
+    font-size: 8pt;
+    height: 20em;
+  }
+  </style>
+
+  <script>
+  window.Report = {
   "intermediate": [
     {
       "timestamp": "2021-11-05T11:25:06.778Z",
@@ -31,7 +80,6 @@
         "200": 400
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 90,
       "pendingRequests": 21
@@ -67,7 +115,6 @@
         "200": 429
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 91,
       "pendingRequests": 28
@@ -103,7 +150,6 @@
         "200": 435
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 97,
       "pendingRequests": 28
@@ -139,7 +185,6 @@
         "200": 430
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 99,
       "pendingRequests": 4
@@ -175,7 +220,6 @@
         "200": 405
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 100,
       "pendingRequests": 1
@@ -211,7 +255,6 @@
         "200": 401
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 100,
       "pendingRequests": 0
@@ -247,7 +290,6 @@
         "200": 1010
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 272,
       "pendingRequests": 44
@@ -283,7 +325,6 @@
         "200": 1152
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 292,
       "pendingRequests": 49
@@ -319,7 +360,6 @@
         "200": 1341
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 341,
       "pendingRequests": 58
@@ -355,7 +395,6 @@
         "200": 1452
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 380,
       "pendingRequests": 62
@@ -391,7 +430,6 @@
         "200": 1693
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 407,
       "pendingRequests": 65
@@ -427,7 +465,6 @@
         "200": 1812
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 418,
       "pendingRequests": 63
@@ -463,7 +500,6 @@
         "200": 1938
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 469,
       "pendingRequests": 67
@@ -499,7 +535,6 @@
         "200": 2124
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 529,
       "pendingRequests": 76
@@ -535,7 +570,6 @@
         "200": 2232
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 528,
       "pendingRequests": 70
@@ -571,7 +605,6 @@
         "200": 2370
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 595,
       "pendingRequests": 102
@@ -607,7 +640,6 @@
         "200": 2670
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 657,
       "pendingRequests": 100
@@ -643,7 +675,6 @@
         "200": 2706
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 660,
       "pendingRequests": 109
@@ -679,7 +710,6 @@
         "200": 2896
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 733,
       "pendingRequests": 125
@@ -715,7 +745,6 @@
         "200": 3034
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 720,
       "pendingRequests": 109
@@ -751,7 +780,6 @@
         "200": 3206
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 796,
       "pendingRequests": 121
@@ -787,7 +815,6 @@
         "200": 3337
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 809,
       "pendingRequests": 136
@@ -823,7 +850,6 @@
         "200": 3453
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 853,
       "pendingRequests": 143
@@ -859,7 +885,6 @@
         "200": 3628
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 842,
       "pendingRequests": 131
@@ -895,7 +920,6 @@
         "200": 3775
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 906,
       "pendingRequests": 140
@@ -931,7 +955,6 @@
         "200": 3907
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 941,
       "pendingRequests": 130
@@ -967,7 +990,6 @@
         "200": 4064
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 965,
       "pendingRequests": 137
@@ -1003,7 +1025,6 @@
         "200": 4237
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1042,
       "pendingRequests": 151
@@ -1039,7 +1060,6 @@
         "200": 4296
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1060,
       "pendingRequests": 161
@@ -1075,7 +1095,6 @@
         "200": 4535
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1130,
       "pendingRequests": 180
@@ -1111,7 +1130,6 @@
         "200": 4646
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1107,
       "pendingRequests": 175
@@ -1147,7 +1165,6 @@
         "200": 4801
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1207,
       "pendingRequests": 195
@@ -1183,7 +1200,6 @@
         "200": 5046
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1205,
       "pendingRequests": 193
@@ -1219,7 +1235,6 @@
         "200": 5081
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1189,
       "pendingRequests": 188
@@ -1255,7 +1270,6 @@
         "200": 5256
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1251,
       "pendingRequests": 203
@@ -1291,7 +1305,6 @@
         "200": 5499
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1301,
       "pendingRequests": 214
@@ -1327,7 +1340,6 @@
         "200": 5554
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1320,
       "pendingRequests": 196
@@ -1363,7 +1375,6 @@
         "200": 5762
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1408,
       "pendingRequests": 211
@@ -1399,7 +1410,6 @@
         "200": 5813
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1409,
       "pendingRequests": 218
@@ -1435,7 +1445,6 @@
         "200": 6034
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1449,
       "pendingRequests": 231
@@ -1471,7 +1480,6 @@
         "200": 6225
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1540,
       "pendingRequests": 247
@@ -1507,7 +1515,6 @@
         "200": 6421
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1527,
       "pendingRequests": 225
@@ -1543,7 +1550,6 @@
         "200": 6483
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1522,
       "pendingRequests": 240
@@ -1579,7 +1585,6 @@
         "200": 6583
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1614,
       "pendingRequests": 267
@@ -1615,7 +1620,6 @@
         "200": 6803
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1639,
       "pendingRequests": 266
@@ -1651,7 +1655,6 @@
         "200": 7024
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1671,
       "pendingRequests": 255
@@ -1687,7 +1690,6 @@
         "200": 7084
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1689,
       "pendingRequests": 251
@@ -1723,7 +1725,6 @@
         "200": 7222
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1743,
       "pendingRequests": 289
@@ -1759,7 +1760,6 @@
         "200": 7402
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1778,
       "pendingRequests": 299
@@ -1795,7 +1795,6 @@
         "200": 7562
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1829,
       "pendingRequests": 290
@@ -1831,7 +1830,6 @@
         "200": 7731
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1862,
       "pendingRequests": 291
@@ -1867,7 +1865,6 @@
         "200": 7835
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1865,
       "pendingRequests": 291
@@ -1903,7 +1900,6 @@
         "200": 7946
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1917,
       "pendingRequests": 301
@@ -1939,7 +1935,6 @@
         "200": 8039
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1905,
       "pendingRequests": 315
@@ -1975,7 +1970,6 @@
         "200": 8152
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1947,
       "pendingRequests": 311
@@ -2011,7 +2005,6 @@
         "200": 8207
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1959,
       "pendingRequests": 309
@@ -2048,7 +2041,6 @@
         "429": 433
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1885,
       "pendingRequests": 346
@@ -2085,7 +2077,6 @@
         "429": 1600
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1934,
       "pendingRequests": 478
@@ -2122,7 +2113,6 @@
         "429": 2265
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1927,
       "pendingRequests": 398
@@ -2159,7 +2149,6 @@
         "429": 629
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1971,
       "pendingRequests": 299
@@ -2195,7 +2184,6 @@
         "200": 8262
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1985,
       "pendingRequests": 330
@@ -2233,7 +2221,6 @@
         "200": 8280
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1972,
       "pendingRequests": 308
@@ -2269,7 +2256,6 @@
         "200": 8367
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1982,
       "pendingRequests": 312
@@ -2305,7 +2291,6 @@
         "200": 8384
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1992,
       "pendingRequests": 317
@@ -2341,7 +2326,6 @@
         "200": 8397
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1993,
       "pendingRequests": 311
@@ -2377,7 +2361,6 @@
         "200": 8391
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1988,
       "pendingRequests": 332
@@ -2413,7 +2396,6 @@
         "200": 8399
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1995,
       "pendingRequests": 316
@@ -2449,7 +2431,6 @@
         "200": 8388
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1995,
       "pendingRequests": 313
@@ -2485,7 +2466,6 @@
         "200": 8432
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1997,
       "pendingRequests": 315
@@ -2523,7 +2503,6 @@
         "200": 8375
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1996,
       "pendingRequests": 342
@@ -2559,7 +2538,6 @@
         "200": 8349
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1989,
       "pendingRequests": 335
@@ -2595,7 +2573,6 @@
         "200": 8357
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1986,
       "pendingRequests": 330
@@ -2632,7 +2609,6 @@
         "429": 5
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1993,
       "pendingRequests": 448
@@ -2669,7 +2645,6 @@
         "429": 17
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1998,
       "pendingRequests": 482
@@ -2706,7 +2681,6 @@
         "429": 4
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1995,
       "pendingRequests": 281
@@ -2742,7 +2716,6 @@
         "200": 8418
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1998,
       "pendingRequests": 297
@@ -2778,7 +2751,6 @@
         "200": 8425
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1996,
       "pendingRequests": 314
@@ -2814,7 +2786,6 @@
         "200": 8436
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1998,
       "pendingRequests": 312
@@ -2850,7 +2821,6 @@
         "200": 8432
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1995,
       "pendingRequests": 302
@@ -2886,7 +2856,6 @@
         "200": 8414
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1996,
       "pendingRequests": 314
@@ -2922,7 +2891,6 @@
         "200": 8315
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1985,
       "pendingRequests": 334
@@ -2958,7 +2926,6 @@
         "200": 8384
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1997,
       "pendingRequests": 339
@@ -2994,7 +2961,6 @@
         "200": 8398
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1999,
       "pendingRequests": 330
@@ -3030,7 +2996,6 @@
         "200": 7647
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 1798,
       "pendingRequests": 288
@@ -3066,7 +3031,6 @@
         "200": 1557
       },
       "matches": 0,
-      "latencies": [],
       "customStats": {},
       "concurrency": 200,
       "pendingRequests": 35
@@ -3110,4 +3074,429 @@
     "customStats": {},
     "pendingRequests": 18540
   }
+};
+  </script>
+
+  <style>
+      h1 {
+        line-height: 200%;
+      }
+
+      body {
+          background-color: #fcfcfc;
+      }
+
+      .container {
+          width: 100%;
+          min-width: 960px;
+      }
+  </style>
+
+
+</head>
+<body>
+
+<div class="container">
+
+<div class="row" id="header">
+  <div class="col-lg-4 col-lg-offset-4">
+    <pre style="font-size: 5pt; background-color: #fcfcfc; border: none;">
+            _   _ _ _                                                _
+  __ _ _ __| |_(_) | | ___ _ __ _   _      _ __ ___ _ __   ___  _ __| |_
+ / _` | '__| __| | | |/ _ \ '__| | | |    | '__/ _ \ '_ \ / _ \| '__| __|
+| (_| | |  | |_| | | |  __/ |  | |_| |    | | |  __/ |_) | (_) | |  | |_
+ \__,_|_|   \__|_|_|_|\___|_|   \__, |    |_|  \___| .__/ \___/|_|   \__|
+                                |___/              |_|
+
+    </pre>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12">
+    <h1 class="text-center" id="page-title">Test run on <span id="timestamp">date</span></h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-3">
+    <p><strong>Summary</strong></p>
+    <table class="table table-bordered table-hover table-condensed">
+      <tbody>
+        <tr>
+          <td>Test duration</td>
+          <td><span id="testDuration">0</span> sec</td>
+        </tr>
+        <tr>
+          <td>Scenarios created</td>
+          <td><span id="scenariosCreated">0</span></td>
+        </tr>
+
+        <tr>
+          <td>Scenarios completed</td>
+          <td><span id="scenariosCompleted">0</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col-lg-5" id="scenarioCountsContainer">
+    <div>
+      <strong>Scenario counts:</strong>
+
+      <p></p>
+
+      <table class="table table-bordered table-hover table-condensed" id="scenarioCounts">
+      </table>
+    </div>
+  </div>
+
+  <div class="col-lg-1">
+    <div id="codesContainer">
+      <strong>Codes</strong>
+
+      <p></p>
+
+      <table class="table table-bordered table-hover table-condensed" id="codes">
+      </table>
+    </div>
+  </div>
+
+  <div class="col-lg-3">
+    <div id="errorsContainer">
+      <strong>Errors</strong>
+
+      <p></p>
+
+      <table class="table table-bordered table-hover table-condensed" id="errors">
+      </table>
+    </div>
+  </div>
+</div> <!-- /.row -->
+
+<div class="row">
+  <div class="text-center col-lg-12">
+    <h2>Charts</h2>
+  </div>
+</div>
+
+<div class="row">
+  <div class="latency-histogram text-center col-lg-12"></div>
+</div>
+
+<div class="row">
+  <div class="latency text-center col-lg-12"></div>
+</div>
+
+<div class="latency-legend"></div>
+
+<div class="row">
+
+</div>
+
+<div class="row">
+  <div class="concurrency text-center col-lg-12"></div>
+</div>
+
+<div class="row">
+  <div class="rps-mean text-center col-lg-12"></div>
+</div>
+<div class="row">
+  <div class="rps-count text-center col-lg-12"></div>
+</div>
+
+<div class="row">
+  <div class="codes-line text-center col-lg-12"></div>
+</div>
+<div class="row">
+  <div class="errors-line text-center col-lg-12"></div>
+</div>
+
+
+  
+
+
+</div>
+
+<div class="row">
+  <div class="col-lg-8 col-lg-offset-2">
+    <h3 class="text-center">Raw report data</h3>
+    <p>This is the raw JSON stats output that the report was generated from.</p>
+    <div id="editor">
+    </div>
+  </div>
+</div>
+
+<script>
+var editor = ace.edit("editor");
+editor.getSession().setMode("ace/mode/javascript");
+editor.setValue(JSON.stringify(Report, null, 2));
+editor.gotoLine(1);editor.setHighlightActiveLine(false);
+
+var l = _;
+
+$('#timestamp').html(moment(Report.aggregate.timestamp).format('DD MMM YYYY HH:mm:SS'));
+$('#testDuration').html(l.size(Report.intermediate) * 10);
+$('#scenariosCompleted').html(Report.aggregate.scenariosCompleted);
+$('#scenariosCreated').html(Report.aggregate.scenariosCreated);
+
+var markers = [];
+if(l.size(Report.phases) > 0) {
+  markers = l.foldl(Report.phases, function(acc, phase, index) {
+    var label = phase.name || 'Phase ' + (index + 1);
+    var timestamp = (index === 0) ? 0 : Report.phases[index - 1].duration + acc[index - 1].timestamp;
+
+    acc.push({
+      timestamp: timestamp,
+      label: label
+    });
+
+    return acc;
+  }, []);
 }
+
+if (l.size(Report.aggregate.scenarioCounts) > 0) {
+  l.each(Report.aggregate.scenarioCounts, function(count, name) {
+    var $tdName = $('<td>' + name + '</td>');
+    var percentage = Math.round(count / Report.aggregate.scenariosCreated * 100 * 1000) / 1000;
+    var $tdCount = $('<td>' + count + ' (' + percentage + '%)' + '</td>');
+    var $el = $('<tr></tr>')
+      .append($tdName)
+      .append($tdCount)
+      .appendTo($('#scenarioCounts'));
+  });
+} else {
+  $('#scenarioCountsContainer').hide();
+}
+
+if (l.size(Report.aggregate.codes) > 0) {
+  l.each(Report.aggregate.codes, function(count, code) {
+    var anchor = '';
+    if (code >= 100 && code < 200) {
+      anchor = '#1xx_Informational';
+    } else if (code >= 200 && code < 300) {
+      anchor = '#2xx_Success';
+    } else if (code >= 300 && code < 400) {
+      anchor = '#3xx_Redirection';
+    } else if (code >= 400 && code < 500) {
+      anchor = '#4xx_Client_Error';
+    } else if (code >= 500 && code < 600) {
+      anchor = '#5xx_Server_Error';
+    }
+
+    var $a = $('<a>' + code + '</a>').attr('href', 'https://en.wikipedia.org/wiki/List_of_HTTP_status_codes' + anchor);
+    var $td = $('<td></td>').append($a);
+    var $el = $('<tr></tr>')
+      .append($td)
+      .append($('<td>' + count + '</td>'))
+      .appendTo($('#codes'));
+  });
+} else {
+  $('#codesContainer').hide();
+}
+
+if (l.size(Report.aggregate.errors) > 0) {
+  l.each(Report.aggregate.errors, function(count, code) {
+    var $el = $('<tr></tr>')
+      .append($('<td>' + code + '</td>'))
+      .append($('<td>' + count + '</td>'))
+      .appendTo($('#errors'));
+  });
+} else {
+  $('#errorsContainer > p').html('&#10004; Test completed without network or OS errors.');
+}
+
+var histogramData = l.map(Report.aggregate.latency, function(v, k) { return {bin: k, value: v} });
+
+MG.data_graphic({
+  chart_type: 'bar',
+  x_label: 'Percentile',
+  y_label: '(ms)',
+  animate_on_load: true,
+  title: 'Overall Latency Distribution',
+  description: 'Distribution of all observed response latencies',
+  target: '.latency-histogram',
+  data: histogramData,
+  x_accessor: 'bin',
+  y_accessor: 'value',
+  binned: true,
+  height: 250,
+  interpolate: 'monotone',
+  padding_percentage: 0,
+  bar_orientation: 'vertical',
+  width: 450
+});
+
+var chartData = l.map(
+  window.Report.intermediate,
+  function(o,i) {
+    return {
+      timestamp: i*10+10,
+
+      rpsMean: o.rps.mean,
+      rpsCount: o.rps.count,
+      concurrency: o.concurrency,
+      latencyMax: o.latency.max,
+      latencyp99: o.latency.p99,
+      latencyp95: o.latency.p95,
+      latencyMedian: o.latency.median,
+      latencyMin: o.latency.min
+    }
+  });
+
+//
+// Response codes
+//
+
+if (l.size(Report.aggregate.codes) > 0) {
+  var codesData = l.foldl(Report.intermediate, function(acc, o, i) {
+    var res = {};
+    res.timestamp = i*10+10;
+    l.each(o.codes, function(count, code) {
+      res[code] = count;
+    });
+    acc.push(res);
+    return acc;
+  }, []);
+  var uniqueCodes = l.foldl(Report.intermediate, function(acc, o) {
+    l.each(o.codes, function(count, code) {
+      if (l.indexOf(acc, code) === -1) {
+        acc.push(code);
+      }
+    });
+    return acc;
+  }, []);
+
+  MG.data_graphic({
+    x_label: 'Time',
+    y_label: 'Count',
+    title: 'HTTP codes',
+    description: 'Occurence of HTTP response codes',
+    target: '.codes-line',
+    data: codesData,
+    x_accessor: 'timestamp',
+    y_accessor: uniqueCodes,
+    legend: uniqueCodes,
+    right: 50,
+    chart_type: 'line',
+    area: false,
+    markers: markers,
+    width: 900
+  });
+}
+
+//
+// Errors
+//
+
+if (l.size(Report.aggregate.errors) > 0) {
+  var errorData = l.foldl(Report.intermediate, function(acc, o, i) {
+    var res = {};
+    res.timestamp = i*10+10;
+    l.each(o.errors, function(count, name) {
+      res[name] = count;
+    });
+    acc.push(res);
+    return acc;
+  }, []);
+  var uniqueErrors = l.foldl(Report.intermediate, function(acc, o) {
+    l.each(o.errors, function(count, name) {
+      if (l.indexOf(acc, name) === -1) {
+        acc.push(name);
+      }
+    });
+    return acc;
+  }, []);
+
+  MG.data_graphic({
+    title: 'Error Codes',
+    description: 'Occurence of error codes',
+    target: '.errors-line',
+    data: errorData,
+    x_accessor: 'timestamp',
+    y_accessor: uniqueErrors,
+    chart_type: 'line',
+    area: false,
+    markers: markers
+  });
+
+}
+
+//
+// Latency
+//
+MG.data_graphic({
+  chart_type: 'line',
+  x_label: 'Time',
+  y_label: '(ms)',
+  animate_on_load: true,
+  area: false,
+  title: "Latency At Intervals",
+  description: "Latency values at different points during the test run",
+  data: chartData,
+  target: '.latency',
+  width: 900,
+  x_accessor: 'timestamp',
+  y_accessor: ['latencyMin', 'latencyMedian', 'latencyp95', 'latencyMax'],
+  legend: ['min', 'p50', 'p95', 'max'],
+  //legend_target: '.latency-legend',
+  right: 50,
+  interpolate: 'monotone',
+  mouseover: function(d, i) {
+  },
+  markers: markers
+        });
+
+            MG.data_graphic({
+            animate_on_load: true,
+            area: false,
+            y_label: 'Count',
+            x_label: 'Time',
+            title: 'Concurrent users',
+            description: 'Concurrent users',
+            data: chartData,
+            target: '.concurrency',
+            x_accessor: 'timestamp',
+            y_accessor: ['concurrency'],
+            interpolate: 'monotone',
+            markers: markers,
+            width: 900
+            });
+
+MG.data_graphic({
+  animate_on_load: true,
+  area: false,
+  y_label: 'Count',
+  x_label: 'Time',
+  title: 'Mean RPS',
+  description: 'Mean requests per second',
+  data: chartData,
+  target: '.rps-mean',
+  x_accessor: 'timestamp',
+  y_accessor: ['rpsMean'],
+  interpolate: 'monotone',
+  markers: markers,
+  width: 900
+});
+
+MG.data_graphic({
+  animate_on_load: true,
+  area: false,
+  y_label: 'Count',
+  x_label: 'Time',
+  title: 'RPS Count',
+  description: 'Count of requests per second',
+  data: chartData,
+  target: '.rps-count',
+  x_accessor: 'timestamp',
+  y_accessor: ['rpsCount'],
+  interpolate: 'monotone',
+  markers: markers,
+  width: 900
+});
+</script>
+<div id="footer">
+  <footer>This report was created with <a href="https://artillery.io">Artillery</a> - free open-source load-testing for HTTP and WebSockets</footer>
+</div>
+</body>
+</html>
