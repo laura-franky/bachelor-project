@@ -5,21 +5,21 @@ import bodyParser from "body-parser";
 const port = 3000;
 export const recipeRouter = Router({ mergeParams: true });
 
-// Basic get
+// Route: Einfaches GET
 recipeRouter.get("/", async (_, res) => {
   res.send({
     message: "Willkommen",
   });
 });
 
-// Get all recipes
+// Route: Alle Rezepte aufrufen
 recipeRouter.get("/recipes", async (_, res) => {
   res.send({
     data: recipes,
   });
 });
 
-// Get one recipe by ID
+// Route: Ein Rezept über ID aufrufen
 recipeRouter.get("/recipes/:id", async (req, res) => {
   const id = Number(req.params.id);
   const recipe = recipes.find((recipe) => recipe.id == id);
@@ -35,7 +35,7 @@ recipeRouter.get("/recipes/:id", async (req, res) => {
   }
 });
 
-// Update one recipe by ID
+// Route: Ein Rezept aktualisieren
 recipeRouter.patch("/recipes/:id", async (req, res) => {
   const id = Number(req.params.id);
   const recipeUpdate = req.body;
@@ -54,7 +54,7 @@ recipeRouter.patch("/recipes/:id", async (req, res) => {
   }
 });
 
-// Create a recipe
+// Route: Ein Rezept erstellen
 recipeRouter.post("/recipes/", async (req, res) => {
   const recipeInfo = req.body;
   const newID = recipes.length + 1;
@@ -65,6 +65,7 @@ recipeRouter.post("/recipes/", async (req, res) => {
   });
 });
 
+// Funktion: Backend Server starten
 export const startServer = () => {
   const app = express();
 

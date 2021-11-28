@@ -1,4 +1,4 @@
-// example data
+// Beispiel Rezepte
 const recipes = [
   {
     id: 1,
