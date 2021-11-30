@@ -12,4 +12,4 @@ Um App Runner zu testen wird ein kleines beispielhaftes REST-Backend entwickelt,
 In diesem Repository sind alle Dateien zu finden die für die Erstellung der Bachelor Arbeit: Performance Analyse einer skalierbaren Produktions-Webanwendung, benötigt wurden. Es handelt sich dabei um die index.js mit der Anwendung, sowie die recipes.js mit den Beispiel Rezepten. Weiterhin ist hier die apprunner.yaml-Datei mit welcher diese Anwendung als App Runner Dienst in Betrieb genommen werden kann.
 
 Zuletzt sind hier auch die Dateien, welche für die Durchführung der Performance Tests notwendig waren, im Ordner artillery zu finden. Dort sind die Konfigurationen und Szenarien die zum Testen verwendet wurden; der Ordner reports beinhaltet alle Ergebnisse der Tests, einmal als JSON- und als HTML-Datei.
-Im Ordner pandas sind die Dateien zur Erstellung der Graphen zur Visualierung der Ergebnisse zu finden. Die Graphen wurden als PDF abgespeichert.
+Im Ordner pandas sind die Dateien zur Erstellung der Graphen zur Visualierung der Ergebnisse zu finden. Die Graphen wurden dort in Unterordnern export als PDF abgespeichert.
